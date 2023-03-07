@@ -1,0 +1,20 @@
+{
+  "name": "Electrolac",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "ELEVENTY_PRODUCTION=true npx @11ty/eleventy && NODE_ENV=production npx tailwindcss -i src/_includes/css/tailwind.css -c tailwind.config.js -o build/css/style.css --minify",
+    "clean": "rm -rf build",
+    "serve": "npx @11ty/eleventy --serve & npx tailwindcss -i src/_includes/css/tailwind.css -c tailwind.config.js -o build/css/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0"
+  },
+  "dependencies": {
+    "html-minifier": "^4.0.0"
+  }
+}

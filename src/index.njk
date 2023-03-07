@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title or site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ title or site.title }}">
+    <meta property="og:description" content="{{ description or site.description }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:type" content="{{ og_type or "website" }}">
+    <meta property="og:locale" content="{{ page.lang }}">
+    <link href="/css/style.css" rel="stylesheet">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": "{{ site.url }}",
+                    "url": "{{ site.url }}",
+                    "name": "{{ site.title }}",
+                    "description": "{{ site.description }}",
+                    "inLanguage": "{{ page.lang }}"
+                }
+            ]
+        }
+    </script>
+</head>
+<body class="bg-stone-800 text-[#e0e0e0]">
+  <main>
+		<div class="h-screen flex flex-col justify-center items-center">
+			<div class="text-9xl"><span class="text-yellow-600">electro</span>lac</div>
+			<div class="text-2xl">très prochainement à Annecy</div>
+		</div>
+	</main>
+</body>
+</html>
